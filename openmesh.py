@@ -58,7 +58,7 @@ def lit_fichier_mesh(path):
 def center_tri(x1,x2,x3,y1,y2,y3):
     return ((x1 + x2 + x3)/3, (y1 + y2 + y3)/3)
 
-def center_ar(x1,x2,y1,y2):
+def center_ar(  ):
     return ((x1+x2)/2,(y1+y2)/2)
 
 """
@@ -111,7 +111,7 @@ def trace_maillage_ind(nbn,coord,tri,ar):
     fig.tight_layout()
     plt.show(block = False)
 
-def trace_maillage_ref(nbn  ,coord,tri,ar,refn,reft,refa):
+def trace_maillage_ref(nbn,coord,tri,ar,refn,reft,refa):
     plt.style.use('_mpl-gallery-nogrid')
     fig, ax = plt.subplots() 
     x = []
@@ -208,7 +208,7 @@ def main():
 
         [nbn,nbt,nba,coord,tri,ar,refn,reft,refa] = lit_fichier_mesh(path)
         trace_maillage_ind(nbn,coord,tri,ar)
-        trace_maillage_ref(nbn,nbt,nba,coord,tri,ar,refn,reft,refa)
+        trace_maillage_ref(nbn,coord,tri,ar,refn,reft,refa)
         pas,qualite = pas_qualite(coord,tri)
 
         print("Pas du mesh = "+ str(pas)+"\nQualite du mesh = "+str(qualite))
