@@ -58,7 +58,7 @@ def lit_fichier_mesh(path):
 def center_tri(x1,x2,x3,y1,y2,y3):
     return ((x1 + x2 + x3)/3, (y1 + y2 + y3)/3)
 
-def center_ar(  ):
+def center_ar(x1,x2,y1,y2 ):
     return ((x1+x2)/2,(y1+y2)/2)
 
 """
